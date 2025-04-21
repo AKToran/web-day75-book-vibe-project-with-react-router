@@ -5,8 +5,9 @@ import { addToStorage } from "../../utilities/handleStorage";
 
 const BookDetails = () => {
   const { id } = useParams();
+  const idInt = parseInt(id);
   const books = useLoaderData();
-  const book = books.find((b) => b.bookId == id);
+  const book = books.find((b) => b.bookId === idInt);
   const {
     bookId,
     bookName,
