@@ -4,6 +4,8 @@ import Root from '../pages/Root/Root'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
 import ErrorPage2 from '../pages/ErrorPage/ErrorPage2'
 import Home from '../Components/Home/Home'
+import About from '../pages/About/About'
+import BookDetails from '../Components/BookDetails/BookDetails'
 
 export const router = createBrowserRouter([
   {
@@ -15,7 +17,14 @@ export const router = createBrowserRouter([
         index: true,
         Component: Home
       },
-      
+      {
+        path:'/bookDetails/:id',
+        Component: BookDetails
+      },
+      {
+        path:'/about',
+        Component: About,
+      },
     ]
   },
   {
